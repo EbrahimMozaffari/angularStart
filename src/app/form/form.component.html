@@ -1,0 +1,25 @@
+<div class="container">
+  <header>
+    <h1>{{siteTitle}}</h1>
+    <h2 [hidden]="userName !== ''">please enter user name</h2>
+  </header>
+
+    <div class="form-group">
+      <label>userName:</label>
+      <input class="form-control" type="text" (input)="onInputChanged($event)" />
+    </div>
+    <br/>
+    <br/>
+
+    <input type="password" [(ngModel)]="password"  />
+
+    <br/>
+    <br/>
+
+    <input type="password" (input)="onPassChanged($event)" />
+    <p>
+      {{errorText}}
+    </p>
+
+</div>
+

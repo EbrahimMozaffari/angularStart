@@ -1,0 +1,27 @@
+<app-star [rating]="3.5"></app-star>
+<app-star [rating]="2"></app-star>
+<app-star [rating]="4.5"></app-star>
+<app-star [rating]="1.5"></app-star>
+<hr/>
+<app-star *ngFor="let rate of ratings" [rating]="rate" (starClicked)="onStarClicked($event)"></app-star>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr/>
