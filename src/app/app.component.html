@@ -1,23 +1,26 @@
 <div class="container p-5">
-  <app-relation></app-relation>
-  <app-directive></app-directive>
-  <hr/>
-<app-attribute></app-attribute>
-  <hr/>
-  <app-form></app-form>
-<hr/>
-  <p [class]="!isCorrect? 'big-font-size' : 'small-font-size'">
-    {{name}}
-  </p>
-  <p [class]="classes">
-    {{name}}
-  </p>
-  <button [disabled]="isEnabled" > my BTN</button>
-  <br/>
-  <input type="text" (input)="onInputChanged($event)" />
-  <br/>
-  <p [style]="styles">twoWayBinding :  {{twoWayBinding}}</p>
-  <input type="text" [(ngModel)]="twoWayBinding"   />
+<app-decoupling></app-decoupling>
+
+
+<!--  <app-relation></app-relation>-->
+<!--  <app-directive></app-directive>-->
+<!--  <hr/>-->
+<!--<app-attribute></app-attribute>-->
+<!--  <hr/>-->
+<!--  <app-form></app-form>-->
+<!--<hr/>-->
+<!--  <p [class]="!isCorrect? 'big-font-size' : 'small-font-size'">-->
+<!--    {{name}}-->
+<!--  </p>-->
+<!--  <p [class]="classes">-->
+<!--    {{name}}-->
+<!--  </p>-->
+<!--  <button [disabled]="isEnabled" > my BTN</button>-->
+<!--  <br/>-->
+<!--  <input type="text" (input)="onInputChanged($event)" />-->
+<!--  <br/>-->
+<!--  <p [style]="styles">twoWayBinding :  {{twoWayBinding}}</p>-->
+<!--  <input type="text" [(ngModel)]="twoWayBinding"   />-->
 
 
 </div>

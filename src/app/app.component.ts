@@ -19,6 +19,10 @@ export class AppComponent implements OnInit{
     //console.log(e)
     this.name =(<HTMLInputElement>e.target).value;
   }
+
+
+
+
   ngOnInit() :void{
   this.styles={
     'font-size': this.isCorrect ?'2rem' : '4rem',

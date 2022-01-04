@@ -11,6 +11,9 @@ import {AttributeComponent} from "./attribute/attribute.component";
 import {DirectiveComponent} from "./directive/directive.component";
 import {RelationComponent} from "./relation/relation.component";
 import { StarComponent } from './star/star.component';
+import { DecouplingComponent } from './decoupling/decoupling.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { UsertableComponent } from './usertable/usertable.component';
 
 // @ts-ignore
 @NgModule({
@@ -22,7 +25,10 @@ import { StarComponent } from './star/star.component';
     AttributeComponent,
     DirectiveComponent,
     RelationComponent,
-    StarComponent
+    StarComponent,
+    DecouplingComponent,
+    AdduserComponent,
+    UsertableComponent
   ],
   imports: [
     BrowserModule,
