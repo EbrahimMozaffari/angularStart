@@ -14,6 +14,7 @@ import { StarComponent } from './star/star.component';
 import { DecouplingComponent } from './decoupling/decoupling.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { UsertableComponent } from './usertable/usertable.component';
+import { IncComponent } from './inc/inc.component';
 
 // @ts-ignore
 @NgModule({
@@ -28,7 +29,8 @@ import { UsertableComponent } from './usertable/usertable.component';
     StarComponent,
     DecouplingComponent,
     AdduserComponent,
-    UsertableComponent
+    UsertableComponent,
+    IncComponent
   ],
   imports: [
     BrowserModule,
