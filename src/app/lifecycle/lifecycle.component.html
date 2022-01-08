@@ -1,1 +1,15 @@
-<p>lifecycle works!</p>
+<p #par2>lifecycle works!</p>
+
+<div style="background-color: green">
+  <ng-content select=".success"></ng-content>
+</div>
+
+<div style="background-color: red">
+  <ng-content select=".error"></ng-content>
+</div>
+
+<div style="background-color: orange">
+  <ng-content select=".warning"></ng-content>
+</div>
+
+<button (click)="onChangedViewChild()">from child change view child</button>

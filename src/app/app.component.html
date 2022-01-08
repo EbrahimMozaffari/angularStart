@@ -1,7 +1,9 @@
 <div class="container p-5">
 
-
-
+<app-lifecycle>
+  <p #par class="success">Content from parent</p>
+</app-lifecycle>
+  <button (click)="onContentChange()">Change Content </button>
 
 
 <!--  <app-content><p #par class="success">test ngcontent like slog in vuejs</p></app-content>-->
