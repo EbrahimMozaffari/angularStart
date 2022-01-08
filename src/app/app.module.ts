@@ -15,6 +15,8 @@ import { DecouplingComponent } from './decoupling/decoupling.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { UsertableComponent } from './usertable/usertable.component';
 import { IncComponent } from './inc/inc.component';
+import { ContentComponent } from './content/content.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 // @ts-ignore
 @NgModule({
@@ -30,7 +32,9 @@ import { IncComponent } from './inc/inc.component';
     DecouplingComponent,
     AdduserComponent,
     UsertableComponent,
-    IncComponent
+    IncComponent,
+    ContentComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
