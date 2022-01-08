@@ -8,7 +8,6 @@ import { UsersComponent } from './users/users.component';
 import {FormsModule} from "@angular/forms";
 import {FormComponent} from "./form/form.component";
 import {AttributeComponent} from "./attribute/attribute.component";
-import {DirectiveComponent} from "./directive/directive.component";
 import {RelationComponent} from "./relation/relation.component";
 import { StarComponent } from './star/star.component';
 import { DecouplingComponent } from './decoupling/decoupling.component';
@@ -17,6 +16,7 @@ import { UsertableComponent } from './usertable/usertable.component';
 import { IncComponent } from './inc/inc.component';
 import { ContentComponent } from './content/content.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { DirectiveComponent } from './directivetest/directivetest.component';
 
 // @ts-ignore
 @NgModule({
@@ -26,7 +26,6 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     UsersComponent,
     FormComponent,
     AttributeComponent,
-    DirectiveComponent,
     RelationComponent,
     StarComponent,
     DecouplingComponent,
@@ -34,7 +33,8 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     UsertableComponent,
     IncComponent,
     ContentComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,

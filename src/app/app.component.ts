@@ -1,7 +1,7 @@
 import {
   AfterViewInit,
   Component,
-  ElementRef,
+  ElementRef, OnChanges,
   OnInit, QueryList,
   Renderer2,
   ViewChild,
@@ -9,6 +9,8 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import {IncComponent} from "./inc/inc.component";
+import {IUser} from "./app-interface";
+import {Event} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +18,7 @@ import {IncComponent} from "./inc/inc.component";
   styleUrls: ['./app.component.sass'],
   //encapsulation:ViewEncapsulation.None // استایل رو توی کل برنمه اجرا میکنه
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit,OnChanges {
   //@ViewChild('par',{static:true,read:ElementRef}) par:ElementRef ;
   @ViewChild(IncComponent, {static: true, read: IncComponent}) incComp: IncComponent | undefined;
   @ViewChildren(IncComponent, {read: IncComponent}) inComp1: QueryList<IncComponent> | undefined;
@@ -35,12 +37,34 @@ export class AppComponent implements OnInit, AfterViewInit {
   isModified: boolean = false;
   isCancelled: boolean = true;
   classes = {};
-
-
-  public onInputChanged(e: Event) {
-    //console.log(e)
-    this.name = (<HTMLInputElement>e.target).value;
+  user:IUser={
+    name:'ebrahim',
+    age:36
   }
+  users:IUser[]=[
+    {
+      name:'ebrahim',
+      age:36
+    },
+    {
+      name:'feri',
+      age:33
+    },
+    {
+      name:'gholi',
+      age:30
+    },
+    {
+      name:'koli',
+      age:39
+    }
+  ]
+
+  userSelected:IUser|undefined;
+  // public onInputChanged(e: Event) {
+  //   //console.log(e)
+  //   this.name = (<HTMLInputElement>e.target).value;
+  // }
 
 
   public ngOnInit(): void {
@@ -71,5 +95,13 @@ export class AppComponent implements OnInit, AfterViewInit {
 // @ts-ignore
     //yademon bashe in kar ro hichvaght anjam nadim faghat ba renderer2 taghir bedim
     this.par?.nativeElement.textContent = '123456'
+  }
+
+  public onSelectChange(){
+    console.log(this.userSelected)
+    //console.log(user)
+  }
+  ngOnChanges(){
+    console.log("ngOnChanges  ",this.userSelected)
   }
 }
