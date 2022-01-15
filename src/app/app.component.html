@@ -1,10 +1,19 @@
 <div class="container p-5">
+<nav class="nav nav-pills nav-fill">
+  <a class="nav-item nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+  <a class="nav-item nav-link" [routerLink]="['/users']" routerLinkActive="active">Users</a>
+</nav>
 
-  <div *appCarousel="let image from images autoplay 'Yes'; let ctrl = controller">
-<img width="350px" [src]="image" />
-    <button (click)="ctrl.next()">Next</button>
-    <button (click)="ctrl.prev()">Previous</button>
-  </div>
+  <router-outlet></router-outlet>
+
+
+
+<!-- custom directive -->
+<!--  <div *appCarousel="let image from images autoplay 'Yes'; let ctrl = controller">-->
+<!--<img width="350px" [src]="image" />-->
+<!--    <button (click)="ctrl.next()">Next</button>-->
+<!--    <button (click)="ctrl.prev()">Previous</button>-->
+<!--  </div>-->
 
 <!--  <input type="text" appColorful style="width: 50rem;border-width:0.2rem ">-->
 <!--&lt;!&ndash;  <p appAppHighlight [highlightColor]="color">Hello Ebrahim</p>&ndash;&gt;-->

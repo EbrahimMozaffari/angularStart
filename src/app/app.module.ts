@@ -20,6 +20,9 @@ import { DirectiveComponent } from './directivetest/directivetest.component';
 import { ColorfulDirective } from './colorful.directive';
 import { AppHighlightDirective } from './app-highlight.directive';
 import { CarouselDirective } from './carousel.directive';
+import { HomeComponent } from './home/home.component';
+import { UserServComponent } from './user-serv/user-serv.component';
+import { UsersServComponent } from './users-serv/users-serv.component';
 
 // @ts-ignore
 @NgModule({
@@ -40,7 +43,10 @@ import { CarouselDirective } from './carousel.directive';
     DirectiveComponent,
     ColorfulDirective,
     AppHighlightDirective,
-    CarouselDirective
+    CarouselDirective,
+    HomeComponent,
+    UserServComponent,
+    UsersServComponent
   ],
   imports: [
     BrowserModule,
