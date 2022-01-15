@@ -28,6 +28,9 @@ export class AppComponent implements OnInit, AfterViewInit,OnChanges {
 
   }
 
+  color:string = 'red';
+  images:string[]= ['/assets/images/01.jpg','/assets/images/02.png','/assets/images/03.png']
+
   title = 'my-first-project';
   name: string = 'Ebrahim';
   isEnabled: boolean = true;

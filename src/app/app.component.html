@@ -1,16 +1,25 @@
 <div class="container p-5">
 
+  <div *appCarousel="let image from images autoplay 'Yes'; let ctrl = controller">
+<img width="350px" [src]="image" />
+    <button (click)="ctrl.next()">Next</button>
+    <button (click)="ctrl.prev()">Previous</button>
+  </div>
 
-  <app-directivetest [user]="user"></app-directivetest>
-  <select (change)="onSelectChange()" [(ngModel)]="userSelected">
-    <ng-container *ngFor="let user1 of users">
-      <ng-container *ngIf="user1.age >= 30">
-        <option [selected]="user1.age == 39 ? true : false" [ngValue]="user1">{{user1.name}} ({{user1.age}})</option>
-      </ng-container>
+<!--  <input type="text" appColorful style="width: 50rem;border-width:0.2rem ">-->
+<!--&lt;!&ndash;  <p appAppHighlight [highlightColor]="color">Hello Ebrahim</p>&ndash;&gt;-->
+<!--  <p [appAppHighlight]="color">Hello Ebrahim</p>-->
 
-    </ng-container>
+<!--  <app-directivetest [user]="user"></app-directivetest>-->
+<!--  <select (change)="onSelectChange()" [(ngModel)]="userSelected">-->
+<!--    <ng-container *ngFor="let user1 of users">-->
+<!--      <ng-container *ngIf="user1.age >= 30">-->
+<!--        <option [selected]="user1.age == 39 ? true : false" [ngValue]="user1">{{user1.name}} ({{user1.age}})</option>-->
+<!--      </ng-container>-->
 
-  </select>
+<!--    </ng-container>-->
+
+<!--  </select>-->
 
 
 <!--<app-lifecycle>-->

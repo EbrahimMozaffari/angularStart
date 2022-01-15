@@ -17,6 +17,9 @@ import { IncComponent } from './inc/inc.component';
 import { ContentComponent } from './content/content.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { DirectiveComponent } from './directivetest/directivetest.component';
+import { ColorfulDirective } from './colorful.directive';
+import { AppHighlightDirective } from './app-highlight.directive';
+import { CarouselDirective } from './carousel.directive';
 
 // @ts-ignore
 @NgModule({
@@ -34,7 +37,10 @@ import { DirectiveComponent } from './directivetest/directivetest.component';
     IncComponent,
     ContentComponent,
     LifecycleComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    ColorfulDirective,
+    AppHighlightDirective,
+    CarouselDirective
   ],
   imports: [
     BrowserModule,

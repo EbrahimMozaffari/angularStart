@@ -9,3 +9,12 @@ export interface IUser
   name:string;
   age:number;
 }
+
+export interface ICarouselContext
+{
+  $implicit:string,
+  controller:{
+    next:()=>void,
+    prev:()=>void,
+  }
+}
