@@ -14,6 +14,7 @@ export class FormComponent{
     this.siteTitle = `Welcome ${(<HTMLInputElement>e.target).value}`;
     this.userName =(<HTMLInputElement>e.target).value
   }
+
   public onPassChanged(e:Event){
     let repass = (<HTMLInputElement>e.target).value;
     if(repass === this.password){

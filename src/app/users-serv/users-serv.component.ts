@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import {LoggingService} from "../logging.service";
 
 @Component({
   selector: 'app-users-serv',
   templateUrl: './users-serv.component.html',
-  styleUrls: ['./users-serv.component.sass']
+  styleUrls: ['./users-serv.component.sass'],
+  providers:[LoggingService],
 })
 export class UsersServComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loggingService:LoggingService) { }
 
   ngOnInit(): void {
   }
