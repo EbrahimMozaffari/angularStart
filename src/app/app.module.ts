@@ -23,6 +23,7 @@ import { CarouselDirective } from './carousel.directive';
 import { HomeComponent } from './home/home.component';
 import { UserServComponent } from './user-serv/user-serv.component';
 import { UsersServComponent } from './users-serv/users-serv.component';
+import {LoggingService} from "./logging.service";
 
 // @ts-ignore
 @NgModule({
@@ -53,7 +54,10 @@ import { UsersServComponent } from './users-serv/users-serv.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  // providers:[LoggingService],
+  providers:[
+    {provide:'API_URL',useValue:'myDomain.com/api/v2'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

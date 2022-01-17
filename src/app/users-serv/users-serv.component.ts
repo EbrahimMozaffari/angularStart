@@ -5,7 +5,7 @@ import {LoggingService} from "../logging.service";
   selector: 'app-users-serv',
   templateUrl: './users-serv.component.html',
   styleUrls: ['./users-serv.component.sass'],
-  providers:[LoggingService],
+
 })
 export class UsersServComponent implements OnInit {
 
