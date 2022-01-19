@@ -1,7 +1,7 @@
 import {
   AfterViewInit,
   Component,
-  ElementRef, OnChanges,
+  ElementRef, Inject, OnChanges,
   OnInit, QueryList,
   Renderer2,
   ViewChild,
@@ -11,6 +11,9 @@ import {
 import {IncComponent} from "./inc/inc.component";
 import {IUser} from "./app-interface";
 import {Event} from "@angular/router";
+import {MyCompanyService} from "./my-company.service";
+import { DEVICE_NAME_TOKEN} from "./app.module";
+// import {MYCOMPANY_SERVICE_TOKEN} from "./app.module";
 
 @Component({
   selector: 'app-root',
@@ -22,11 +25,18 @@ export class AppComponent implements OnInit, AfterViewInit,OnChanges {
   //@ViewChild('par',{static:true,read:ElementRef}) par:ElementRef ;
   @ViewChild(IncComponent, {static: true, read: IncComponent}) incComp: IncComponent | undefined;
   @ViewChildren(IncComponent, {read: IncComponent}) inComp1: QueryList<IncComponent> | undefined;
-   @ViewChild('par') par: ElementRef | undefined ;
+  @ViewChild('par') par: ElementRef | undefined ;
 
-  constructor(private renderer: Renderer2) {
+  // constructor(private renderer: Renderer2) {
+  // }
+  // constructor(@Inject(MYCOMPANY_SERVICE_TOKEN) private MyCompanyService:MyCompanyService) {
+  //
+  // }
+  constructor(@Inject(DEVICE_NAME_TOKEN) private deviceName:string) {
+    console.log("deviceName",deviceName)
 
   }
+
 
   color:string = 'red';
   images:string[]= ['/assets/images/01.jpg','/assets/images/02.png','/assets/images/03.png']
