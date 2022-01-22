@@ -2,7 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef, Inject, OnChanges,
-  OnInit, QueryList,
+  OnInit, Optional, QueryList,
   Renderer2,
   ViewChild,
   ViewChildren,
@@ -32,8 +32,14 @@ export class AppComponent implements OnInit, AfterViewInit,OnChanges {
   // constructor(@Inject(MYCOMPANY_SERVICE_TOKEN) private MyCompanyService:MyCompanyService) {
   //
   // }
-  constructor(@Inject(DEVICE_NAME_TOKEN) private deviceName:string) {
-    console.log("deviceName",deviceName)
+
+
+  // constructor(@Inject(DEVICE_NAME_TOKEN) private deviceName:string) {
+  //   console.log("deviceName",deviceName)
+  //
+  // }
+
+  constructor(@Optional() private myCompanyService:MyCompanyService) {
 
   }
 

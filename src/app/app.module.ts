@@ -25,6 +25,10 @@ import { UserServComponent } from './user-serv/user-serv.component';
 import { UsersServComponent } from './users-serv/users-serv.component';
 
 import {LoggingService} from "./logging.service";
+import { AdminComponent } from './admin/admin.component';
+import {RouterModule, Routes} from "@angular/router";
+import { ClientComponent } from './client/client.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 // import {MyCompanyService} from "./my-company.service";
 
 // export function myCompanyServiceProvider():MyCompanyService{
@@ -42,6 +46,14 @@ export function deviceNameProvider(userAgent:string,screenWidth:string,screenHei
 }
 
 export const DEVICE_NAME_TOKEN = new InjectionToken<string>('DEVICE_NAME_TOKEN')
+
+// const routes :Routes = [
+//   {path:'',component:HomeComponent},
+//   {path:'users',component:UsersServComponent},
+//   {path:'admin',component:AdminComponent},
+// ];
+
+
 // @ts-ignore
 @NgModule({
   declarations: [
@@ -64,11 +76,15 @@ export const DEVICE_NAME_TOKEN = new InjectionToken<string>('DEVICE_NAME_TOKEN')
     CarouselDirective,
     HomeComponent,
     UserServComponent,
-    UsersServComponent
+    UsersServComponent,
+    AdminComponent,
+    ClientComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    //RouterModule.forRoot(routes),
     FormsModule
   ],
   // providers:[LoggingService],

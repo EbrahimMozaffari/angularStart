@@ -10,6 +10,12 @@ export interface IUser
   age:number;
 }
 
+export interface FUser
+{
+  id:number,
+  name:string,
+}
+
 export interface ICarouselContext
 {
   $implicit:string,

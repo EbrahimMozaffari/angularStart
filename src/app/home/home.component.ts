@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {LoggingService} from "../logging.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -10,7 +11,7 @@ import {LoggingService} from "../logging.service";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private loggingService: LoggingService) {
+  constructor(private loggingService: LoggingService,private router:Router) {
   }
 //,@Inject("API_URL") url:string
   ngOnInit(): void {
@@ -31,5 +32,9 @@ export class HomeComponent implements OnInit {
     this.loggingService.title = (e.target as HTMLInputElement).value;
     //this.loggingService.title = `Welcome ${(<HTMLInputElement>e.target).value}`;
     //this.userName =(<HTMLInputElement>e.target).value
+  }
+
+  public onUserRedirect(){
+  this.router.navigate(['/users'])
   }
 }
