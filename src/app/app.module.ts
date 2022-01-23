@@ -29,6 +29,8 @@ import { AdminComponent } from './admin/admin.component';
 import {RouterModule, Routes} from "@angular/router";
 import { ClientComponent } from './client/client.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { EditusercomponentComponent } from './editusercomponent/editusercomponent.component';
+import {UserService} from "./user.service";
 // import {MyCompanyService} from "./my-company.service";
 
 // export function myCompanyServiceProvider():MyCompanyService{
@@ -79,7 +81,8 @@ export const DEVICE_NAME_TOKEN = new InjectionToken<string>('DEVICE_NAME_TOKEN')
     UsersServComponent,
     AdminComponent,
     ClientComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    EditusercomponentComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +92,7 @@ export const DEVICE_NAME_TOKEN = new InjectionToken<string>('DEVICE_NAME_TOKEN')
   ],
   // providers:[LoggingService],
   providers:[
+    UserService,
     {provide:USER_AGENT,useValue:window.navigator.userAgent},
     {provide:SCREEN_WIDTH,useValue:window.screen.width},
     {provide:SCREEN_HEIGHT,useValue:window.screen.height},

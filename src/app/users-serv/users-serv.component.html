@@ -1,5 +1,10 @@
-<p class="alert-primary">users-serv works!</p>
-
-<app-user-serv></app-user-serv>
+<p class="alert-primary">users-serv Component</p>
+<div>
+  <div *ngFor="let user of users">
+    <span>{{user.id + ': '}}</span>
+    <a [routerLink]="['/user',user.id]">{{user.name}}</a>
+  </div>
+</div>
+<!--<app-user-serv></app-user-serv>-->
 
 

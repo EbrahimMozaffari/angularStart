@@ -1,0 +1,4 @@
+<label class="pe-3">{{user.id}}</label>
+<input #name type="text" [value]="user.name">
+<input #email type="text" [value]="user.email">
+<button (click)="onSaveChanges(name.value,email.value)">save changes</button>

@@ -1,5 +1,40 @@
-<p>this is child component</p>
-<p>user component dynamic</p>
 
-<!--<p>user ID : {{ selectedUser.id}}</p>-->
-<!--<p>user Name : {{ selectedUser.name}}</p>-->
+<div *ngIf="!editMode">
+  <p>this is child component</p>
+  <p>user component dynamic</p>
+  <div *ngIf="isUserFound; else elsecound">
+    <p>user ID : {{ selectedUser ?  selectedUser.id : ''}}</p>
+<!--    <a-->
+<!--      [routerLink]="['/user',selectedUser ?  selectedUser.id : '','edit']"-->
+<!--      [queryParams]="{-->
+<!--      editMode:'1',-->
+<!--      isAdmin:'1'-->
+<!--      }"-->
+<!--      [fragment]="'title1'"-->
+<!--    >-->
+<!--      <p>user Name : {{ selectedUser ?  selectedUser.name : ''}}</p>-->
+<!--    </a>-->
+    <a
+      [routerLink]="['/user',selectedUser ?  selectedUser.id : '','edit']"
+      [queryParams]="{
+      editMode:'1',
+      isAdmin:'1'
+      }"
+      [fragment]="'title1'"
+      (click)="editMode=true"
+    >
+      <p>user Name : {{ selectedUser ?  selectedUser.name : ''}}</p>
+    </a>
+    <button class="btn-primary" (click)="onEditUser()">Edit</button>
+  </div>
+  <ng-template #elsecound>
+    user Not Found
+  </ng-template>
+</div>
+<div *ngIf="editMode">
+  <router-outlet></router-outlet>
+</div>
+
+
+<!--<a [routerLink]="['/user','2']">select Second User</a>-->
+

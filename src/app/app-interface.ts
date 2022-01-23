@@ -15,6 +15,12 @@ export interface FUser
   id:number,
   name:string,
 }
+export interface SUser
+{
+  id:number,
+  name:string,
+  email:string,
+}
 
 export interface ICarouselContext
 {
